@@ -37,7 +37,7 @@ export function choiceinit(client: Client) {
           creatorname();
           console.log(
             gradient(["red", "purple"])(
-              "Link: https://discord.gg/infinite-community-1014921352500756500"
+              "Link: https://discord.gg/zECBBtM2VR"
             )
           );
           awaitenter(client);
@@ -57,9 +57,9 @@ export function choiceinit(client: Client) {
   );
 }
 
-let langat: "pt" | "en" = "pt";
+let langat: "esp" | "en" = "esp";
 
-export function setlang(lang: "en" | "pt") {
+export function setlang(lang: "en" | "esp") {
   langat = lang;
 }
 
@@ -69,14 +69,20 @@ export function t(key: string): string {
 export function creatorname() {
   console.log(
     gradient(["#ff4500", "#ffa500", "#ff6347"])(`
-      ▄▄▄██▀▀▀▒█████   ▄▄▄       ▒█████   ██ ▄█▀ ██▀███   ██▓  ██████ ▄▄▄█████▓ ▄▄▄       ███▄    █  ██▓
-      ▒██  ▒██▒  ██▒▒████▄    ▒██▒  ██▒ ██▄█▒ ▓██ ▒ ██▒▓██▒▒██    ▒ ▓  ██▒ ▓▒▒████▄     ██ ▀█   █ ▓██▒
-      ░██  ▒██░  ██▒▒██  ▀█▄  ▒██░  ██▒▓███▄░ ▓██ ░▄█ ▒▒██▒░ ▓██▄   ▒ ▓██░ ▒░▒██  ▀█▄  ▓██  ▀█ ██▒▒██▒
-   ▓██▄██▓ ▒██   ██░░██▄▄▄▄██ ▒██   ██░▓██ █▄ ▒██▀▀█▄  ░██░  ▒   ██▒░ ▓██▓ ░ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░██░
-    ▓███▒  ░ ████▓▒░ ▓█   ▓██▒░ ████▓▒░▒██▒ █▄░██▓ ▒██▒░██░▒██████▒▒  ▒██▒ ░  ▓█   ▓██▒▒██░   ▓██░░██░
-    ▒▓▒▒░  ░ ▒░▒░▒░  ▒▒   ▓▒█░░ ▒░▒░▒░ ▒ ▒▒ ▓▒░ ▒▓ ░▒▓░░▓  ▒ ▒▓▒ ▒ ░  ▒ ░░    ▒▒   ▓▒█░░ ▒░   ▒ ▒ ░▓
-    ▒ ░▒░    ░ ▒ ▒░   ▒   ▒▒ ░  ░ ▒ ▒░ ░ ░▒ ▒░  ░▒ ░ ▒░ ▒ ░░ ░▒  ░ ░    ░      ▒   ▒▒ ░░ ░░   ░ ▒░ ▒ ░
-    ░ ░ ░  ░ ░   ▒    ░   ▒   ░ ░ ░   ░ ░░ ░    ░░   ░  ▒ ░░  ░  ░            ░   ▒      ░   ░ ░    ░ 
+██████╗┼┼█████╗┼███╗┼┼██╗
+██╔══██╗██╔══██╗████╗┼██║
+██████╔╝██║┼┼╚═╝██╔██╗██║
+██╔══██╗██║┼┼██╗██║╚████║
+██║┼┼██║╚█████╔╝██║┼╚███║
+╚═╝┼┼╚═╝┼╚════╝┼╚═╝┼┼╚══╝
+┼██████╗██╗┼┼██╗┼█████╗┼██████╗┼
+██╔════╝██║┼┼██║██╔══██╗██╔══██╗
+╚█████╗┼███████║██║┼┼██║██████╔╝
+┼╚═══██╗██╔══██║██║┼┼██║██╔═══╝┼
+██████╔╝██║┼┼██║╚█████╔╝██║┼┼┼┼┼
+╚═════╝┼╚═╝┼┼╚═╝┼╚════╝┼╚═╝┼┼┼┼┼
+
+
     `)
   );
 
@@ -142,7 +148,7 @@ export async function Cloner(
 
       if (!guild) {
         console.error(gradient(["red", "darkred"])(
-          `Esta guilda não existe ou você não está nela, tente corrigir o ID`
+          `Esta ID no existe o no estás en él, intenta corregir el ID`
         ));
         errors++;
         rl.close();
@@ -151,15 +157,15 @@ export async function Cloner(
 
       if (createNewServer) {
         const newGuild = await client.guilds.create(
-          'Infinite Community Cloner',
+          'RCN Shop Cloner',
           {
             icon:
-              'https://cdn.discordapp.com/attachments/1014927587954393098/1145100637281992784/infinite_logo.png',
+              'https://cdn.discordapp.com/attachments/1077298432424804382/1168160102814072922/Logo_para_Estancia_Infantil.png?ex=6550c0df&is=653e4bdf&hm=1f560ab9cf0db298c78838acd88203da50014ddc0fafc91b35ed29ad7c571291&',
           }
         );
 
         if (!newGuild) {
-          console.error(gradient(["red", "darkred"])('Acontecu um erro fatal na criação do servidor, o clonador será reiniciado em 10 segundos'));
+          console.error(gradient(["red", "darkred"])('Se produjo un error fatal al crear el servidor, el clonador se reiniciará en 10 segundos'));
           errors++;
           setTimeout(() => {
             clearall();
@@ -178,7 +184,7 @@ export async function Cloner(
       });
 
       if (!cloner) {
-        console.error(gradient(["red", "darkred"])('Aconteceu um erro fatal na clonagem e o clonador será reiniciado em 10 segundos'));
+        console.error(gradient(["red", "darkred"])('Se produjo un error fatal de clonación y el clonador se reiniciará en 10 segundos.'));
         errors++;
         setTimeout(() => {
           clearall();
@@ -190,7 +196,7 @@ export async function Cloner(
 
       if (!newGuild) {
         console.error(gradient(["red", "darkred"])(
-          `O servidor de destino não existe ou você não está nele, tente corrigir o ID`
+          `El servidor de destino no existe o no estás en él, prueba a corregir el ID`
         ));
         errors++;
         rl.close();
@@ -220,17 +226,17 @@ export async function Cloner(
         const exetimess = endtime2[0] + endtime2[1] / 1e9;
         const Tempo2 = Tempoex(exetimess);
 
-        console.log(gradient(["blue", "darkblue"])(`» A clonagem demorou: ${Tempo2}`));
-        console.log(gradient(["blue", "darkblue"])(`» A configuração demorou: ${Tempo}`));
-        console.log(gradient(["blue", "darkblue"])(`» Número de canais clonados: ${clonedall}`));
-        console.log(gradient(["blue", "darkblue"])(`» Contagem de erros durante a clonagem: ${errors}`));
+        console.log(gradient(["blue", "darkblue"])(`» La clonación tomó tiempo: ${Tempo2}`));
+        console.log(gradient(["blue", "darkblue"])(`» La configuración tomó tiempo: ${Tempo}`));
+        console.log(gradient(["blue", "darkblue"])(`» Número de canales clonados: ${clonedall}`));
+        console.log(gradient(["blue", "darkblue"])(`» Recuento de errores durante la clonación: ${errors}`));
 
         if (cloneOption === 3) {
           const template = await newGuild.createTemplate(
             `${guild.name}`,
-            `By Infinite community (https://discord.gg/infinite-community-1014921352500756500)`
+            `By RCN Shop (https://discord.gg/4SbMhwXjNc)`
           );
-          console.log(`» Link do template: ${template.url}`);
+          console.log(`» Enlace de plantilla: ${template.url}`);
         }
 
         rl.close();
@@ -250,17 +256,17 @@ export async function Cloner(
       const exetimes = endtime[0] + endtime[1] / 1e9;
       const Tempo = Tempoex(exetimes);
     } catch (error) {
-      console.error(gradient(["red", "darkred"])('Ocorreu um erro durante a clonagem:', error));
+      console.error(gradient(["red", "darkred"])('Se produjo un error durante la clonación:', error));
       errors++;
       rl.close();
     }
   };
 
-  rl.question(gradient(["blue", "darkblue"])('Digite o ID do servidor: '), async (guildId) => {
+  rl.question(gradient(["blue", "darkblue"])('Digite el ID del servidor: '), async (guildId) => {
     guildId1 = guildId;
 
     if (!createNewServer) {
-      rl.question(gradient(["blue", "darkblue"])('Digite o ID do servidor de destino: '), (destinationId) => {
+      rl.question(gradient(["blue", "darkblue"])('Digite el ID del servidor de destino: '), (destinationId) => {
         GUILD_ID = destinationId;
         proceedWithCloning();
       });
@@ -278,39 +284,39 @@ export async function serverinfo(client: Client) {
       creatorname();
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Nome do servidor: ${preview.name}`
+          `Nombre del servidor: ${preview.name}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Descrição do servidor: ${preview.description}`
+          `Descripción del servidor: ${preview.description}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Membros: ${preview.approximateMemberCount}`
+          `Número de Miembros: ${preview.approximateMemberCount}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Número de Canais: ${preview.approximatePresenceCount}`
+          `Número de canales: ${preview.approximatePresenceCount}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Criado em: ${preview.createdAt}`
+          `Creado en: ${preview.createdAt}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `ID do servidor: ${preview.id}`
+          `ID del servidor: ${preview.id}`
         )
       );
 
       if (preview.icon) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Ícone do servidor: ${preview.iconURL()}`
+            `Icono del servidor: ${preview.iconURL()}`
           )
         );
       }
@@ -318,7 +324,7 @@ export async function serverinfo(client: Client) {
       if (preview.splash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Splash do servidor: ${preview.splashURL()}`
+            `Splash del servidor: ${preview.splashURL()}`
           )
         );
       }
@@ -326,36 +332,36 @@ export async function serverinfo(client: Client) {
       if (preview.discoverySplash) {
         console.log(
           gradient(["#ff4500", "#ffa500", "#ff6347"])(
-            `Discovery Splash do servidor: ${preview.discoverySplashURL()}`
+            `Presentación del splash del servidor: ${preview.discoverySplashURL()}`
           )
         );
       }
 
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Recursos do servidor: ${preview.features.join(", ")}`
+          `Recursos del servidor: ${preview.features.join(", ")}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Emojis do servidor: ${preview.emojis.size}`
+          `Emojis del servidor: ${preview.emojis.size}`
         )
       );
       console.log(
         gradient(["#ff4500", "#ffa500", "#ff6347"])(
-          `Stickers do servidor: ${preview.stickers.size}`
+          `Stickers del servidor: ${preview.stickers.size}`
         )
       );
     } catch (error) {
       console.error(
-        gradient(["#ff4500", "#ffa500", "#ff6347"])("Aconteceu um erro:"),
+        gradient(["#ff4500", "#ffa500", "#ff6347"])("Ocurrió un error:"),
         error
       );
     }
     awaitenter(client);
   }
   rl.question(
-    gradient(["purple", "pink"])("Digite o ID do servidor: "),
+    gradient(["purple", "pink"])("Digite el ID del servidor: "),
     (guildId) => {
       fetchGuildData(guildId);
     }
@@ -369,7 +375,7 @@ export async function configop(client: Client, functionName: string) {
   console.clear();
   creatorname();
   console.log(
-    gradient(["purple", "pink"])("Configurando o cloner:")
+    gradient(["purple", "pink"])("Configurando el clonador:")
   );
 
   const configOptions: any = {
@@ -387,22 +393,22 @@ export async function configop(client: Client, functionName: string) {
   while (true) {
     const tableContent = `
     ${chalk.red("O:")} ${gradient(["purple", "pink"])(
-      "Clonar quantas mensagens por canal? (Essa função está temporariamente desativada)"
+      "¿Cuántos mensajes deseas clonar por canal? (Esta función está temporalmente deshabilitada)"
     )}
     ${chalk.red("V:")} ${chalk.blue(configOptions.maxMessagesPerChannel)}
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])("Salvar em JSON?")}
-    ${chalk.red("V:")} ${configOptions.jsonSave ? chalk.green("Sim") : chalk.red("Não")
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])("¿Guardar en JSON?")}
+    ${chalk.red("V:")} ${configOptions.jsonSave ? chalk.green("Si") : chalk.red("No")
       }
     ${chalk.red("O:")} ${gradient(["purple", "pink"])("Json bonito?")}
-    ${chalk.red("V:")} ${configOptions.jsonBeautify ? chalk.green("Sim") : chalk.red("Não")
+    ${chalk.red("V:")} ${configOptions.jsonBeautify ? chalk.green("Si") : chalk.red("No")
       }
-    ${chalk.red("O:")} ${gradient(["purple", "pink"])("Não clonar")}
+    ${chalk.red("O:")} ${gradient(["purple", "pink"])("No clonar")}
     ${chalk.red("V:")} ${chalk.yellow(configOptions.doNotBackup.join(", "))}
     ${chalk.red("O:")} ${gradient(["purple", "pink"])("Ignorar tickets?")}
-    ${chalk.red("V:")} ${configOptions2.ignoreTickets ? chalk.green("Sim") : chalk.red("Não")
+    ${chalk.red("V:")} ${configOptions2.ignoreTickets ? chalk.green("Si") : chalk.red("No")
       }
     ${chalk.red("O:")} ${gradient(["purple", "pink"])("Debug?")}
-    ${chalk.red("V:")} ${configOptions2.Debug ? chalk.green("Sim") : chalk.red("Não")
+    ${chalk.red("V:")} ${configOptions2.Debug ? chalk.green("Si") : chalk.red("No")
       }
     `;
     const tableWithBorders = boxen(tableContent, {
@@ -429,7 +435,7 @@ export async function configop(client: Client, functionName: string) {
     try {
       const choice = await espop(
         gradient(["purple", "pink"])(
-          "Deseja reconfigurar? (1 - Sim, 2 - Não, 3 - Voltar): "
+          "¿Quieres reconfigurar? (1 - Si, 2 - No, 3 - Volver): "
         )
       );
 
@@ -437,25 +443,25 @@ export async function configop(client: Client, functionName: string) {
         configOptions.maxMessagesPerChannel = parseInt(
           await espop(
             gradient(["purple", "pink"])(
-              "Deseja clonar quantas mensagens por canal? (Essa função foi desativada temporariamente): "
+              "¿Cuántos mensajes quieres clonar por canal? (Esta función ha sido deshabilitada temporalmente): "
             )
           ),
           10
         );
         configOptions.jsonSave = await yop(
           gradient(["purple", "pink"])(
-            "Deseja salvar na JSON?"
+            "Desea guardar el JSON?"
           )
         );
         configOptions.jsonBeautify = await yop(
           gradient(["purple", "pink"])(
-            "Deseja deixar o JSON mais bonito?"
+            "Quieres dejar el JSON más bonito?"
           )
         );
         configOptions.doNotBackup = (
           await espop(
             gradient(["purple", "pink"])(
-              "Digite o que você deseja ignorar (ex: emojis, channels, roles): "
+              "Ingresa lo que deseas ignorar (por ejemplo, emojis, canales, roles): "
             )
           )
         )
@@ -463,13 +469,13 @@ export async function configop(client: Client, functionName: string) {
           .map((item) => item.trim());
         const ticketop = await yop(
           gradient(["purple", "pink"])(
-            "Deseja ignorar tickets? "
+            "¿Quieres ignorar los tickets? "
           )
         );
 
         const Debugop = await yop(
           gradient(["purple", "pink"])(
-            "Deseja ativar o debug?"
+            "¿Quieres activar la depuración?"
           )
         );
 
@@ -563,12 +569,12 @@ function awaitenter(client: Client) {
   );
 }
 function Channgelang(client: Client) {
-  if (langat === "pt") {
+  if (langat === "esp") {
     setlang("en");
     langat = "en";
   } else {
-    setlang("pt");
-    langat = "pt";
+    setlang("esp");
+    langat = "esp";
   }
   console.clear();
   creatorname();

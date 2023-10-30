@@ -225,7 +225,7 @@ export async function loadChannel(
 ) {
     return new Promise(async (resolve) => {
         if (channelData.name.startsWith("ticket-") && configOptions2.ignoreTickets) {
-            console.log(`O Canal ${channelData.name} é possivelmente um ticket e será ignorado`);
+            console.log(`El canal ${channelData.name} posiblemente sea un ticket y será ignorado.`);
             return null; 
         }
         const loadMessages = (channel: TextChannel | ThreadChannel, messages: MessageData[]): Promise<void> => {
@@ -316,7 +316,7 @@ export async function loadChannel(
                     await loadMessages(channel as TextChannel, (channelData as TextChannelData).messages).catch(() => {});
                 }
                 
-                console.log(gradient(['#43a1ff', '#8a3ffc', '#3c0080'])(`» Canal de texto criado: ${channelData.name}`));
+                console.log(gradient(['#43a1ff', '#8a3ffc', '#3c0080'])(`» Canal de texto creado: ${channelData.name}`));
                 return channel;
             } else {
                 resolve(channel);
@@ -335,7 +335,7 @@ export async function clearGuild(guild: Guild) {
             try {
                 await role.delete();
             } catch (error) {
-                console.error(`Não foi possível excluir o cargo ${role.name}: ${error}`);
+                console.error(`No se puede eliminar la posición ${role.name}: ${error}`);
             }
         });
     
@@ -343,7 +343,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await channel.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o canal ${channel.name}: ${error}`);
+            console.error(`No se puede eliminar el canal ${channel.name}: ${error}`);
         }
     });
     
@@ -351,7 +351,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await emoji.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o emoji ${emoji.name}: ${error}`);
+            console.error(`No se pueden eliminar emojis ${emoji.name}: ${error}`);
         }
     });
 
@@ -360,7 +360,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await webhook.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir o webhook ${webhook.name}: ${error}`);
+            console.error(`No se puede eliminar el webhook ${webhook.name}: ${error}`);
         }
     });
     
@@ -369,7 +369,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await guild.members.unban(ban.user);
         } catch (error) {
-            console.error(`Não foi possível desbanir o usuário ${ban.user.username}: ${error}`);
+            console.error(`No se puede desbanear al usuario ${ban.user.username}: ${error}`);
         }
     });
     
@@ -378,7 +378,7 @@ export async function clearGuild(guild: Guild) {
         try {
             await integration.delete();
         } catch (error) {
-            console.error(`Não foi possível excluir a integração ${integration.name}: ${error}`);
+            console.error(`No se puede eliminar la integración ${integration.name}: ${error}`);
         }
     });
 
